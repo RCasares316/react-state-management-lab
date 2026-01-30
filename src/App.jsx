@@ -122,10 +122,11 @@ function App() {
         <h3>Money: {money}</h3>
       </div>
       <div>
-        <h2>Your Team</h2>
         <h2>Team Strength: {totalStrength}</h2>
         <h2>Team Agility: {totalAgility}</h2>
+        <h2>Your Team</h2>
         {team.length === 0 && <p>Pick some team members!</p>}
+        <h2>Fighters</h2>
         <ul>
           {team.map((member) => (
             <li key={member.id}>
