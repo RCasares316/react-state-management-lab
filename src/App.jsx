@@ -125,6 +125,9 @@ function App() {
           {team.map((member) => (
             <li key={member.id}>
             <p>{member.name}</p>
+            <p>Price: {zombieFighter.price}</p>
+            <p>Strength: {zombieFighter.strength}</p>
+            <p>Agility: {zombieFighter.agility}</p>
             <button onClick={() => handleRemoveFighter(member)}>Remove Fighter</button>
             </li>
           ))}
