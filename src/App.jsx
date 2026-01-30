@@ -86,15 +86,9 @@ function App() {
       img: "https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-state-management-lab/assets/e41f26.png",
     },
   ]);
-  let totalStrength =
-    team.length === 0
-      ? 0
-      : team.reduce((sum, fighter) => sum + fighter.strength, 0);
+  let totalStrength = team.length === 0 ? 0: team.reduce((sum, fighter) => sum + fighter.strength, 0);
 
-  let totalAgility =
-    team.length === 0
-      ? 0
-      : team.reduce((sum, fighter) => sum + fighter.agility, 0);
+  let totalAgility = team.length === 0 ? 0: team.reduce((sum, fighter) => sum + fighter.agility, 0);
 
   const handleAddFighter = (fighter) => {
     if (money < fighter.price) {
@@ -117,9 +111,9 @@ function App() {
 
   return (
     <>
-      <h1>Hello world!</h1>
+      <h1>Zombie Fighters</h1>
       <div>
-        <h3>Money: {money}</h3>
+        <h2>Money: {money}</h2>
       </div>
       <div>
         <h2>Team Strength: {totalStrength}</h2>
@@ -141,11 +135,11 @@ function App() {
         <ul>
           {zombieFighters.map((zombieFighter) => (
             <li key={zombieFighter.id}>
-              <img src={zombieFighter.img} alt="" />
-              <h2>{zombieFighter.name}</h2>
-              <p>{zombieFighter.price}</p>
-              <p>{zombieFighter.strength}</p>
-              <p>{zombieFighter.agility}</p>
+              <img src={zombieFighter.img} alt={zombieFighter.name} />
+              <h3>{zombieFighter.name}</h3>
+              <p>Price: {zombieFighter.price}</p>
+              <p>Strength: {zombieFighter.strength}</p>
+              <p>Agility: {zombieFighter.agility}</p>
               <button onClick={() => handleAddFighter(zombieFighter)}>
                 Add Fighter
               </button>
