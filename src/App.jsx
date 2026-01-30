@@ -124,10 +124,11 @@ function App() {
         <ul>
           {team.map((member) => (
             <li key={member.id}>
+            <img src={member.img} alt={member.name} />
             <p>{member.name}</p>
-            <p>Price: {zombieFighter.price}</p>
-            <p>Strength: {zombieFighter.strength}</p>
-            <p>Agility: {zombieFighter.agility}</p>
+            <p>Price: {member.price}</p>
+            <p>Strength: {member.strength}</p>
+            <p>Agility: {member.agility}</p>
             <button onClick={() => handleRemoveFighter(member)}>Remove Fighter</button>
             </li>
           ))}
